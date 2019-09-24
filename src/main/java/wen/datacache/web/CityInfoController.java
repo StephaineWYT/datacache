@@ -28,4 +28,14 @@ public class CityInfoController {
         return redisMapper.cacheValue(key, value);
     }
 
+    @RequestMapping(value = "del/{key}", method = RequestMethod.GET)
+    public Boolean del(@PathVariable("key") String key) {
+        return redisMapper.removeValue(key);
+    }
+
+    @RequestMapping(value = "count/{key}", method = RequestMethod.GET)
+    public Long count(@PathVariable("key") String key) {
+        return redisMapper.getListSize(key);
+    }
+
 }

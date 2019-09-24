@@ -1,7 +1,5 @@
 package wen.datacache.entity;
 
-import org.springframework.scheduling.annotation.EnableScheduling;
-
 import java.io.Serializable;
 
 public class CityInfo implements Serializable {
